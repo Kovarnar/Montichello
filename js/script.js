@@ -69,25 +69,31 @@ const swiper_HERO = new Swiper('.hero__slider', {
 const swiper_NEWS = new Swiper('.news__swiper', {
     loop: true,
     loopeSlides: 3,
-    slidesPerView: 3,
     spaceBetween: 30,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
+    spaceBetween: 30,
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
-        280:{slidesPerView: 1,},
-        768:{slidesPerView: 2,},
-        1200:{slidesPerView: 3,}
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+        280:{
+            slidesPerView: 1,
+        },
+        768:{
+            slidesPerView: 2,
+        },
+        1200:{
+            slidesPerView: 3,
+        }
     },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    }
 });
 
 //---------------------------------------------------------------

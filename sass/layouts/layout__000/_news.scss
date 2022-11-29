@@ -1,16 +1,45 @@
 .news {
     position: relative;
-    padding: 60px 0;      // 120px
-    margin-bottom: 75px;   // 150px
+    padding: 60px 0;
     background: url('/img/news-bg.png'), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
     background-repeat: no-repeat;
     background-position: 0 100%;
-
     &__title {
-        margin-bottom: 45px; // 90px
+        margin-bottom: 45px;
     }
-    &__wrapper {}
-    &__swiper {}
+    .swiper {
+        overflow: hidden;
+        padding-bottom: 35px;
+        &-slide {
+            display: flex;
+            justify-content: center;
+        }
+        &-pagination {
+            bottom:0;
+        }
+        &-pagination-bullet {
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+            line-height: 0;
+            font-size: 0;
+            background-color: transparent;
+            border: 1px solid $whiteColor;
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+            &-active {
+                background-color: $whiteColor;
+            }
+        }
+        &-button-prev {
+            display: none;
+        }
+        &-button-next {
+            display: none;
+        }
+    }
 
     .content {
         display: flex;
@@ -18,9 +47,16 @@
         background-color: $whiteColor;
         max-width: 370px;
         &__image {
+            padding: 0 0 65% 0;
+            overflow: hidden;
+            position: relative;
             img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                height: unset;
+                height: 100%;
+                object-fit: cover;
             }
         }
         &__wrapper{
@@ -30,18 +66,18 @@
             display: block;
             font-family: $montserratFont;
             font-weight: 700;
-            font-size: rem(16px);   // 22px
+            font-size: rem(18px);
             color: $darkGrayColor;
             text-transform: uppercase;
-            line-height: 1.227;
+            line-height: 1.22;
             margin-bottom: 15px;
         }
         &__text {
             font-family: $openSansFont;
             font-weight: 400;
-            font-size: rem(12px);   // 18px
+            font-size: rem(12px);
             color: $darkGrayColor;
-            line-height: 1.36;
+            line-height: 1.35;
             margin-bottom: 39px;
         }
         &__person {
@@ -61,7 +97,8 @@
         &__person-name {
             font-family: $montserratFont;
             font-weight: 400;
-            font-size: rem(14px);   // 18px
+            font-size: rem(14px);
+            text-transform: uppercase;
             line-height: 1.22;
             color: $darkGrayColor;
             margin-bottom: 6px;
@@ -69,17 +106,8 @@
         &__person-data {
             font-family: $montserratFont;
             font-weight: 400;
-            font-size: rem(10px);   // 14px
+            font-size: rem(10px);
             color: $blueColor;
         }
     }
 }
-
-.swiper {}
-.swiper-wrapper {}
-.swiper-slide {
-    &__content {}
-}
-.swiper-pagination {}
-.swiper-button-prev {}
-.swiper-button-next {}

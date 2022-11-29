@@ -1,0 +1,13 @@
+.hero {
+    .swiper {
+        &-content {
+            padding: 150px 60px;
+            span {
+                font-size: rem(80px);
+            }
+        }
+        &-pagination {
+            padding: 52px;
+        }
+    }
+}

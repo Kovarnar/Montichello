@@ -1,10 +1,12 @@
 .hero {
-    &__slide-content {
-        span {
-            font-size: rem(50px);
-        }
-        p {
-            font-size: rem(12px);
+    .swiper {
+        &-content {
+            span {
+                font-size: rem(50px);
+            }
+            p {
+                font-size: rem(14px);
+            }
         }
     }
 }
