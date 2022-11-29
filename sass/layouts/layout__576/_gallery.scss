@@ -1,0 +1,13 @@
+.gallery {
+    &__list {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 10px;
+    }
+    &__item {
+        &--big {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.footer {
+    padding: 200px 0;
+    text-align: left;
+    .container {
+        max-width: 770px;
+        margin: 0 auto;
+    }
+    &__wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 41px;
+        gap: 0;
+    }
+    &__logo{
+    }
+    &__logo-img {
+        width: unset;
+    }
+    &__social{
+        justify-self: flex-end;
+        margin: 0;
+    }
+    &__rights{
+        font-size: rem(12px);   //14px
+    }
+}

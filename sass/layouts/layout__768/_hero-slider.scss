@@ -1,0 +1,10 @@
+.hero {
+    &__slide-content {
+        span {
+            font-size: rem(70px);
+        }
+        p {
+            font-size: rem(16px);
+        }
+    }
+}

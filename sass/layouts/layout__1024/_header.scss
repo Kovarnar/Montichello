@@ -1,0 +1,48 @@
+.header {
+    padding: 40px 0;
+    &__wraper {
+        position: unset;
+        background: unset;
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+        padding: 0;
+    }
+    &__nav-list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+    }
+    &__nav-item {
+        padding-left: 14px;
+        margin-left: 0;
+        font-size: rem(14px);
+        &:hover, &:focus {
+            transform: unset;
+        }
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+        &:first-of-type{
+                cursor: unset;
+            &::before {
+                background-color: $whiteColor;
+            }
+        }
+        &:not(:first-child):hover {
+            transform: scale(1.2);
+        }
+        &:first-of-type{
+            a {
+                cursor: default;
+            }
+        }
+    }
+
+    &__social {
+        margin: 0;
+    }
+    &__button{
+        display: none;
+    }
+}

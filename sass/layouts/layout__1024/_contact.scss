@@ -1,0 +1,31 @@
+.contact {
+    &__info {
+        padding: 60px;
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__wrapper {
+        flex-direction: row;
+        gap: 50px;
+    }
+    &__list {
+        gap: 28px;
+    }
+    &__list-item {
+        .icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    &__form {
+        gap: 28px;
+    }
+    &__form-input {
+        padding-bottom: 9px;
+        font-size: rem(16px);
+    }
+    &__form-submit {
+        font-size: rem(16px);
+    }
+}

@@ -1,0 +1,85 @@
+.news {
+    position: relative;
+    padding: 60px 0;      // 120px
+    margin-bottom: 75px;   // 150px
+    background: url('/img/news-bg.png'), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    &__title {
+        margin-bottom: 45px; // 90px
+    }
+    &__wrapper {}
+    &__swiper {}
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        background-color: $whiteColor;
+        max-width: 370px;
+        &__image {
+            img {
+                width: 100%;
+                height: unset;
+            }
+        }
+        &__wrapper{
+            padding: 30px 20px;
+        }
+        &__title {
+            display: block;
+            font-family: $montserratFont;
+            font-weight: 700;
+            font-size: rem(16px);   // 22px
+            color: $darkGrayColor;
+            text-transform: uppercase;
+            line-height: 1.227;
+            margin-bottom: 15px;
+        }
+        &__text {
+            font-family: $openSansFont;
+            font-weight: 400;
+            font-size: rem(12px);   // 18px
+            color: $darkGrayColor;
+            line-height: 1.36;
+            margin-bottom: 39px;
+        }
+        &__person {
+            display: flex;
+            gap: 20px;
+        }
+        &__person-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+        }
+        &__person-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__person-name {
+            font-family: $montserratFont;
+            font-weight: 400;
+            font-size: rem(14px);   // 18px
+            line-height: 1.22;
+            color: $darkGrayColor;
+            margin-bottom: 6px;
+        }
+        &__person-data {
+            font-family: $montserratFont;
+            font-weight: 400;
+            font-size: rem(10px);   // 14px
+            color: $blueColor;
+        }
+    }
+}
+
+.swiper {}
+.swiper-wrapper {}
+.swiper-slide {
+    &__content {}
+}
+.swiper-pagination {}
+.swiper-button-prev {}
+.swiper-button-next {}

@@ -1,0 +1,51 @@
+.projects {
+    margin-bottom: 100px;
+    &__title {
+        margin-bottom: 70px;
+    }
+    &__wrapper {
+        gap: 80px;
+    }
+    &__card {
+        flex-direction: row;
+        gap: 35px;
+        position: relative;
+    }
+    &__image {
+        flex-basis: 56%;
+        position: relative;
+        display: flex;
+        picture {
+            align-self: flex-end;
+        }
+        &-left{
+            box-shadow: -130px -55px 0px $blueColor;
+        }
+        &-right{
+            box-shadow: 130px -55px 0px $purpleColor;
+        }
+    }
+    &__content {
+        flex-basis: 54%;
+        &--reverse{
+            order: -1;
+        }
+    }
+    &__subtitle {
+        font-size: rem(18px);
+    }
+    &__title-h4 {
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-size: rem(16px);
+        margin-bottom: 25px;
+    }
+    &__button {
+        margin-bottom: 40px;
+    }
+    &__place {
+        font-size: rem(13px);
+        margin-bottom: 18px;
+    }
+}

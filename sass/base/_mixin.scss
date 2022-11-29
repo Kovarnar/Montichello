@@ -1,0 +1,15 @@
+@function rem($target) {
+    @return ($target/$baseFontSize) * 1rem;
+}
+
+// @mixin circle {
+//     position: absolute;
+//     background-color: $redColor;
+//     border-radius: 50%;
+// }
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,39 @@
+.news {
+// background-image: url('/img/news/city@2x.jpg');
+// background-repeat: no-repeat;
+// background-size: 100% auto;
+// background-position: 100% bottom;
+padding: 90px 0;      // 120px
+margin-bottom: 100px;   // 150px
+    &__title {
+        margin-bottom: 60px; // 90px
+    }
+    &__wrapper {}
+    &__swiper {}
+
+    .content {
+        &__title {
+            font-size: rem(18px);   // 22px
+        }
+        &__text {
+            font-size: rem(16px);   // 18px
+        }
+        &__person-name {
+            font-size: rem(16px);   // 18px
+        }
+        &__person-data {
+            font-size: rem(12px);   // 14px
+        }
+    }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+    &__content {}
+}
+.swiper-pagination {}
+.swiper-button-prev {}
+.swiper-button-next {}

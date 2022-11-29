@@ -1,0 +1,33 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/hero-bg.png'), linear-gradient(243.43deg, rgb(126, 90, 255) 16.9%, rgb(85, 183, 255) 83.27%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__down {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        cursor: pointer;
+        .icon {
+            animation: down 1.5s infinite;
+        }
+    }
+}
+
+@keyframes down {
+    0% {
+    transform: translate(0);
+    }
+    20% {
+    transform: translateY(15px);
+    }
+    40% {
+    transform: translate(0);
+    }
+}

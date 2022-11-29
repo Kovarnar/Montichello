@@ -1,0 +1,79 @@
+.projects {
+    padding-top: 50px;
+    margin-bottom: 75px;
+    &__title {
+        margin-bottom: 50px; 
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 60px; 
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__image {
+        picture {
+            img{
+                width: 100%;
+                height: unset;
+                object-fit: cover;
+
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+
+    &__subtitle {
+        font-family: $montserratFont;
+        font-weight: 400;
+        font-size: rem(14px);    // 22px
+        color: $darkGrayColor;
+        line-height: 1.227;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin-bottom: 10px;    // 19px
+    }
+
+    &__text {
+        font-family: $openSansFont;
+        font-weight: 400;
+        font-size: rem(12px);    // 18px
+        color: $darkGrayColor;
+        line-height: 1.667;
+        margin-bottom: 20px;    // 40px
+    }
+
+    &__button {
+        margin-bottom: 30px;
+        width: fit-content;
+    }
+
+    &__place {
+        font-family: $openSansFont;
+        font-weight: 400;
+        font-style: italic;
+        font-size: rem(11px);   // 15px
+        .icon {
+            fill: $darkGrayColor;
+            width: 9px;
+            height: 13px;
+        }
+    }
+
+    &__card--revers {
+    }
+}

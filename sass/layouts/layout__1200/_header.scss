@@ -1,0 +1,11 @@
+.header {
+    padding: 54px 0;
+    &__wraper {
+        gap: 110px;
+    }
+    &__nav {
+    }
+    &__nav-list {
+        column-gap: 70px;
+    }
+}

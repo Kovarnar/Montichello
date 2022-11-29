@@ -1,0 +1,15 @@
+.header {
+    padding: 30px 0; //54px
+    &__logo-img {
+        width: unset;
+    }
+    &__wraper {
+        padding-top: 130px;
+    }
+}
+
+.header.active{
+    .header__wraper {
+        top: -30px;
+    }
+}

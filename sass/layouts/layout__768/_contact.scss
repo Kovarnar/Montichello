@@ -1,0 +1,42 @@
+.contact {
+    background: unset;
+    &__map {
+        height: 700px;
+    }
+    &__info {
+        position: absolute;
+        top: 400px;
+        left: 50%;
+        z-index: 5;
+        transform: translateX(-50%);
+        padding: 60px 50px; 
+        background: url('/img/contacts-bg.png'), rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__wrapper {
+        flex-direction: row;
+        gap: 35px;
+    }
+    &__list {
+        width: 300px;
+        gap: 18px;
+    }
+    &__list-item {
+        font-size: rem(16px);
+    }
+    &__form {
+        gap: 25px;
+    }
+    &__form-input {
+        width: 300px;
+        padding-bottom: 8px;
+        font-size: rem(16px);
+    }
+    &__form-submit {
+        font-size: rem(16px); 
+    }
+}
