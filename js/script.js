@@ -1,4 +1,3 @@
-// 'use strict'
 document.addEventListener('DOMContentLoaded', () => {
     const HEADER = document.querySelector('.header');
     const MENU_BUTTON = HEADER.querySelector('.header__button');
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         HEADER.classList.remove('active');
         document.body.classList.remove('no-scroll');
     }));
-
 
     const DOWN = document.querySelector('.hero__down');
     DOWN.addEventListener('click', () => {
@@ -91,12 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         }
     });
-
 });
 
-
-
-//---------------------------------------------------------------
 function initMap() {
     const CENTER = { lat: 40.66269967882884, lng: -73.89080823791476};
     const   SVG_MAEKER = {
