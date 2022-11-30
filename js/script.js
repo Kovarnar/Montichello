@@ -44,68 +44,72 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+    const swiper_HERO = new Swiper('.hero__slider', {
+        directMion: 'vertical',
+        slidesPerView: 1,
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
     
-
-});
-
-const swiper_HERO = new Swiper('.hero__slider', {
-    directMion: 'vertical',
-    slidesPerView: 1,
-    loop: true,
-    effect: "fade",
-    fadeEffect: {
-        crossFade: true,
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-
-const swiper_NEWS = new Swiper('.news__swiper', {
-    loop: true,
-    loopeSlides: 3,
-    spaceBetween: 30,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        280:{
-            slidesPerView: 1,
+    const swiper_NEWS = new Swiper('.news__swiper', {
+        loop: true,
+        loopeSlides: 3,
+        spaceBetween: 30,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
         },
-        768:{
-            slidesPerView: 2,
+        breakpoints: {
+            280:{
+                slidesPerView: 1,
+            },
+            768:{
+                slidesPerView: 2,
+            },
+            1200:{
+                slidesPerView: 3,
+            }
         },
-        1200:{
-            slidesPerView: 3,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         }
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    }
+    });
+
 });
+
+
 
 //---------------------------------------------------------------
 function initMap() {
     const CENTER = { lat: 40.66269967882884, lng: -73.89080823791476};
+    const   SVG_MAEKER = {
+        url: 'img/pin-map.svg'
+    }
     const MAP = new google.maps.Map(document.getElementById("map"), {
         center: CENTER,
         zoom: 13,
     });
     const   MARKER = new google.maps.Marker({
-        position: CENTER,
+        position: { lat: 40.677477470289496, lng: -73.90631677431017 },
         map: MAP,
-        // icon: SVG_MAEKER
+        icon: SVG_MAEKER,
+        opacity: 0.7
     });
 }
