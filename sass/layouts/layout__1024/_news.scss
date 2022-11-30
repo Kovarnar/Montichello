@@ -16,11 +16,11 @@ padding: 120px 0;
             height: 40px;
         }
         &-button-prev {
-            background-image: url('/img/news/left.svg');
+            background-image: url('../img/news/left.svg');
             left: 0
         }
         &-button-next {
-            background-image: url('/img/news/right.svg');
+            background-image: url('../img/news/right.svg');
             right: 0;
         }
     }
