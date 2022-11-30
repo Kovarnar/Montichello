@@ -5,6 +5,7 @@ padding: 120px 0;
     }
     .swiper {
         padding-bottom: 60px;
+        padding: 0 50px 60px;
         &-button-prev, &-button-next {
             display: block;
             color: transparent;
@@ -14,7 +15,6 @@ padding: 120px 0;
             width: 40px;
             height: 40px;
         }
-
         &-button-prev {
             background-image: url('/img/news/left.svg');
             left: 0

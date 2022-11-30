@@ -71,10 +71,10 @@ const swiper_NEWS = new Swiper('.news__swiper', {
     loopeSlides: 3,
     spaceBetween: 30,
     spaceBetween: 30,
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         280:{
             slidesPerView: 1,

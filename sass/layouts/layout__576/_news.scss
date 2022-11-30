@@ -1,0 +1,9 @@
+.news {
+    .swiper {
+        &-pagination-bullet {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+}

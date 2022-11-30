@@ -16,13 +16,13 @@
     }
 
     &__title {
-        margin-bottom: 21px;
+        margin-bottom: 22px;
     }
 
     &__wrapper {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 19px;
     }
 
     &__list {
@@ -34,8 +34,9 @@
         font-family: $montserratFont;
         font-weight: 400;
         font-size: rem(14px);
-        line-height: 1.555;
+        line-height: 1.556;
         color: $blackColor;
+        letter-spacing: 0.05rem;
         .icon {
             width: 13px;
             height: 13px;
