@@ -9,7 +9,7 @@
     }
     &__info {
         padding: 30px;
-        background: url('../img/contacts-bg.png');
+        background-image: url('../img/contacts-bg.png');
         background-repeat: no-repeat;
         background-position: 0 100%;
     }
@@ -72,7 +72,7 @@
         color: $blackColor;
         font-family: $montserratFont;
         font-weight: 400;
-        font-size: rem(14px);   // 18px
+        font-size: rem(14px);
         overflow: hidden;
         transition: transform .3s ease;
         &:active {
