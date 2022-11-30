@@ -1114,11 +1114,11 @@ img {
     height: 40px;
   }
   .news .swiper-button-prev {
-    background-image: url("/img/news/left.svg");
+    background-image: url("../img/news/left.svg");
     left: 0;
   }
   .news .swiper-button-next {
-    background-image: url("/img/news/right.svg");
+    background-image: url("../img/news/right.svg");
     right: 0;
   }
   .news .content__title {
