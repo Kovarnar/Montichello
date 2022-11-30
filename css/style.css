@@ -484,7 +484,7 @@ img {
 .news {
   position: relative;
   padding: 60px 0;
-  background: url("/img/news-bg.png"), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+  background: url("../img/news-bg.png"), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
   background-repeat: no-repeat;
   background-position: 0 100%;
 }
@@ -669,7 +669,7 @@ img {
 }
 .contact__info {
   padding: 30px;
-  background: url("/img/contacts-bg.png");
+  background: url("../img/contacts-bg.png");
   background-repeat: no-repeat;
   background-position: 0 100%;
 }
