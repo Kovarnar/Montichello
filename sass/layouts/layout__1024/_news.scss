@@ -1,13 +1,16 @@
 .news {
 padding: 120px 0;
+    .container {
+        position: relative;
+    }
     &__title {
         margin-bottom: 90px;
     }
     .swiper {
         padding-bottom: 60px;
-        padding: 0 50px 60px;
         &-button-prev, &-button-next {
-            display: block;
+            position: absolute;
+            z-index: 10;
             color: transparent;
             background-size: cover;
             background-repeat: no-repeat;
@@ -16,12 +19,12 @@ padding: 120px 0;
             height: 40px;
         }
         &-button-prev {
-            background-image: url('../img/news/left.svg');
-            left: 0
+            // background-image: url('../img/news/left.svg');
+            left: -60px;
         }
         &-button-next {
-            background-image: url('../img/news/right.svg');
-            right: 0;
+            // background-image: url('../img/news/right.svg');
+            right: -60px;
         }
     }
 

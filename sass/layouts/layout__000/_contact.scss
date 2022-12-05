@@ -44,6 +44,9 @@
         flex-direction: column;
         gap: 20px;
     }
+    &__form-lable {
+        position: relative;
+    }
     &__form-input {
         padding-bottom: 10px;
         font-family: $montserratFont;
@@ -57,6 +60,10 @@
         transition: opacity .3s ease;
         &:focus {
             opacity: 1;
+        }
+        &.error {
+            border-bottom: 1px solid rgb(255, 0, 0);
+            
         }
     }
     &__form-submit {

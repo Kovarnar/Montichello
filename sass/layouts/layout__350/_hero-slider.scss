@@ -1,0 +1,31 @@
+.hero {
+    .swiper {
+        position: relative;
+        height: 100%;
+        padding: 150px 0;
+        &-slide {
+            text-align: center;
+            @include center;
+        }
+        &-content {
+            padding: 150px 25px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $whiteColor;
+            font-family: $montserratFont;
+            line-height: 1.225;
+            span {
+                display: block;
+                letter-spacing: 0.1rem;
+                font-weight: 700;
+                font-size: rem(40px);
+                margin-bottom: 20px;
+            }
+            p {
+                letter-spacing: 0.3rem;
+                font-weight: 400;
+                font-size: rem(10px);
+            }
+        }
+    }
+}

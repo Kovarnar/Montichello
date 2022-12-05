@@ -1,8 +1,8 @@
 .footer {
-    padding: 200px 0;
+    padding: 200px 0 240px;
     text-align: left;
     .container {
-        max-width: 770px;
+        max-width: 800px;
         margin: 0 auto;
     }
     &__wrapper{
@@ -10,8 +10,6 @@
         justify-content: space-between;
         margin-bottom: 41px;
         gap: 0;
-    }
-    &__logo{
     }
     &__logo-img {
         width: unset;

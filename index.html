@@ -106,48 +106,49 @@
     <main class="main">
         <section class="hero" id="hero">
             <h2 class="visually-hidden">place for SEO</h2>
-            <!-- <div class="container"> -->
-                <div class="swiper hero__slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <span>SIMPLE & MODERN</span>
-                                <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <span>warm & attractive</span>
-                                <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <span>light  & reliable</span>
-                                <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <span>nice & original</span>
-                                <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <span>fast & strong</span>
-                                <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+            <div class="container">
+                
                 <div class="hero__down" id="down">
                     <svg class="icon">
                         <use xlink:href="./img/sprite.svg#arrow"></use>
                     </svg>
                 </div>
-            <!-- </div> -->
+            </div>
+            <div class="swiper hero__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <span>SIMPLE & MODERN</span>
+                            <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <span>warm & attractive</span>
+                            <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <span>light  & reliable</span>
+                            <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <span>nice & original</span>
+                            <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <span>fast & strong</span>
+                            <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <section class="projects" id="projects">
             <div class="container">
@@ -202,6 +203,8 @@
         <section class="news" id="news">
             <div class="container">
                 <h3 class="news__title title title--section title--section--white title--white">LATEST NEWS</h3>
+            </div>
+            <div class="container">
                 <div class="news__swiper swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -311,8 +314,16 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev">
+                        <svg class="icon">
+                            <use xlink:href="./img/sprite.svg#left"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg class="icon">
+                            <use xlink:href="./img/sprite.svg#right"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
@@ -407,9 +418,9 @@
                                 From 07:05AM to 19:30PM
                             </li>
                         </ul>
-                        <form class="contact__form" method="post" enctype="multipart/form-data" autocomplete="on">
-                            <input class="contact__form-input" type="text" name="name" id="name" placeholder="Name">
-                            <input class="contact__form-input" type="email" name="email" id="imail" placeholder="Email" required>
+                        <form class="contact__form"  enctype="multipart/form-data" autocomplete="on"> <!-- method="post"  -->
+                            <input class="contact__form-input" type="text" name="name" placeholder="Name">
+                            <input class="contact__form-input contact__form-input--email" type="text" name="email" placeholder="Email">
                             <input class="contact__form-submit" type="submit" value="submit">
                         </form>
                     </div>

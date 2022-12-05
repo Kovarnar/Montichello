@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     MENU_LINK.forEach(item => item.addEventListener('click', function(e) {
         e.preventDefault();
         const ID = item.getAttribute('href').slice(1);
-        console.log(ID);
         document.getElementById(ID).scrollIntoView({
             block: 'start',
             behavior: 'smooth'
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 30,
         spaceBetween: 30,
         autoplay: {
-            delay: 2000,
+            delay: 4000,
             disableOnInteraction: false,
         },
         breakpoints: {
@@ -106,4 +105,45 @@ function initMap() {
         icon: SVG_MAEKER,
         opacity: 0.7
     });
+}
+
+
+
+const FORM = document.querySelector('.contact__form'),
+    INPUTS = FORM.querySelectorAll('.contact__form-input'),
+    EMAIL = FORM.querySelector('.contact__form-input--email'),
+    LABLE = FORM.querySelector('.contact__form-lable');
+
+function validateEmail(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function validateCountry(country) {
+    let re = new RegExp('.co$');
+    return re.test(String(country).toLocaleLowerCase());
+}
+
+FORM.onsubmit = function() {
+    let emailVal = EMAIL.value,
+        emptyInputs = Array.from(FORM).filter(input => input.value === '');
+
+    INPUTS.forEach(function(input) {
+        if (input.value === '') {
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (emptyInputs.length !==0) {
+        return false;
+    };
+
+    if(!validateEmail(emailVal) || validateCountry(emailVal)) {
+        EMAIL.classList.add('error');
+        return false;
+    } else {
+        EMAIL.classList.remove('error');
+    }
 }

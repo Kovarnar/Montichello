@@ -36,11 +36,10 @@
                 background-color: $whiteColor;
             }
         }
-        &-button-prev {
-            display: none;
-        }
-        &-button-next {
-            display: none;
+
+        &-button-prev:after, 
+        &-button-next:after {
+            content: unset;
         }
     }
 
