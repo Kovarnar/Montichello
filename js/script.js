@@ -6,11 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('no-scroll');
     });
 
+
     const CONTACT = HEADER.querySelector('.header__social');
     CONTACT.addEventListener('click', () => {
         HEADER.classList.remove('active');
         document.body.classList.remove('no-scroll');
     })
+
 
     const MENU_LINK = document.querySelectorAll('a[href^="#"]');
     MENU_LINK.forEach(item => item.addEventListener('click', function(e) {
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('no-scroll');
     }));
 
+
     const DOWN = document.querySelector('.hero__down');
     DOWN.addEventListener('click', () => {
         const  PROJECTS = document.querySelector('.projects');
@@ -31,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
 
     $('.image-popup-vertical-fit').magnificPopup({
 		type: 'image',
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			verticalFit: true
 		}
 	});
+
 
     const swiper_HERO = new Swiper('.hero__slider', {
         directMion: 'vertical',
@@ -58,7 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
     });
-    
+
+
     const swiper_NEWS = new Swiper('.news__swiper', {
         loop: true,
         loopeSlides: 3,
@@ -88,6 +94,37 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         }
     });
+
+
+    const FORM = document.querySelector('.contact__form'),
+        INPUTS = FORM.querySelectorAll('.contact__form-input'),
+        EMAIL = FORM.querySelector('.contact__form-input[type="email"]');
+
+    function validateEmail(email) {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function validateCountry(country) {
+        let re = new RegExp('.co$');
+        return re.test(String(country).toLocaleLowerCase());
+    }
+
+    FORM.onsubmit = function() {
+        let emailVal = EMAIL.value,
+            emptyInputs = Array.from(FORM).filter(input => input.value === '');
+        INPUTS.forEach(function(input) {
+            (input.value === '') ? input.classList.add('error') : input.classList.remove('error');
+        });
+        if (emptyInputs.length !==0) return false;
+        if(!validateEmail(emailVal) || validateCountry(emailVal)) {
+            EMAIL.classList.add('error');
+            return false;
+        } else EMAIL.classList.remove('error');
+    };
+
+
+
 });
 
 function initMap() {
@@ -105,45 +142,4 @@ function initMap() {
         icon: SVG_MAEKER,
         opacity: 0.7
     });
-}
-
-
-
-const FORM = document.querySelector('.contact__form'),
-    INPUTS = FORM.querySelectorAll('.contact__form-input'),
-    EMAIL = FORM.querySelector('.contact__form-input--email'),
-    LABLE = FORM.querySelector('.contact__form-lable');
-
-function validateEmail(email) {
-    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-function validateCountry(country) {
-    let re = new RegExp('.co$');
-    return re.test(String(country).toLocaleLowerCase());
-}
-
-FORM.onsubmit = function() {
-    let emailVal = EMAIL.value,
-        emptyInputs = Array.from(FORM).filter(input => input.value === '');
-
-    INPUTS.forEach(function(input) {
-        if (input.value === '') {
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
-    });
-
-    if (emptyInputs.length !==0) {
-        return false;
-    };
-
-    if(!validateEmail(emailVal) || validateCountry(emailVal)) {
-        EMAIL.classList.add('error');
-        return false;
-    } else {
-        EMAIL.classList.remove('error');
-    }
 }
