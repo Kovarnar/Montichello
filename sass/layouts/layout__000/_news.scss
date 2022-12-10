@@ -37,6 +37,11 @@
             }
         }
 
+        &-button-prev, 
+        &-button-next {
+            visibility: hidden;
+        }
+
         &-button-prev:after, 
         &-button-next:after {
             content: unset;
@@ -72,7 +77,7 @@
             color: $darkGrayColor;
             text-transform: uppercase;
             line-height: 1.22;
-            margin-bottom: 15px;
+            margin-bottom: 13px;
         }
         &__text {
             font-family: $openSansFont;
@@ -80,7 +85,7 @@
             font-size: rem(12px);
             color: $darkGrayColor;
             line-height: 1.35;
-            margin-bottom: 39px;
+            margin-bottom: 38px;
             
             display: -webkit-box;
             -webkit-line-clamp: 2;

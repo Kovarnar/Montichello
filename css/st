@@ -521,9 +521,6 @@ img {
 .news .swiper-pagination-bullet-active {
   background-color: #fff;
 }
-.news .swiper-button-prev, .news .swiper-button-next {
-  visibility: hidden;
-}
 .news .swiper-button-prev:after, .news .swiper-button-next:after {
   content: unset;
 }
@@ -1226,7 +1223,6 @@ img {
 }
 @media only screen and (min-width: 1600px) {
   .news .swiper-button-prev, .news .swiper-button-next {
-    visibility: visible;
     position: absolute;
     top: 260px;
     color: transparent;
@@ -1244,4 +1240,4 @@ img {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=st.map */

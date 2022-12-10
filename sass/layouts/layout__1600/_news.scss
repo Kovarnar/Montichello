@@ -1,0 +1,21 @@
+.news {
+    .swiper {
+        &-button-prev, &-button-next {
+            visibility: visible;
+            position: absolute;
+            top: 260px;
+            color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 40px;
+            height: 40px;
+        }
+        &-button-prev {
+            left: -85px;
+        }
+        &-button-next {
+            right: -85px;
+        }
+    }
+}

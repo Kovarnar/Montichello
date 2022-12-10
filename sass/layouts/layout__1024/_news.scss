@@ -7,25 +7,7 @@ padding: 120px 0;
         margin-bottom: 90px;
     }
     .swiper {
-        padding-bottom: 60px;
-        &-button-prev, &-button-next {
-            position: absolute;
-            z-index: 10;
-            color: transparent;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 40px;
-            height: 40px;
-        }
-        &-button-prev {
-            // background-image: url('../img/news/left.svg');
-            left: -60px;
-        }
-        &-button-next {
-            // background-image: url('../img/news/right.svg');
-            right: -60px;
-        }
+        padding-bottom: 53px;
     }
 
     .content {

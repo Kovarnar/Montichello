@@ -7,10 +7,10 @@
     }
     &__wrapper {
         flex-direction: row;
-        gap: 40px;
+        gap: 30px;
     }
     &__list {
-        gap: 30px;
+        gap: 31px;
     }
     &__list-item {
         font-size: rem(18px);
@@ -20,9 +20,10 @@
         }
     }
     &__form {
-        gap: 28px;
+        gap: 33px;
     }
     &__form-input {
+        width: 310px;
         padding-bottom: 12px;
         font-size: rem(18px);
     }
